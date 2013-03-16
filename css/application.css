@@ -1,0 +1,245 @@
+/*
+ * The boring stuff
+ * ----------------
+ * Basic styling.
+ */
+
+body {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.container {
+    max-width: 600px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* 
+ * The pentagon
+ * ------------
+ * This is the approach used in http://themaninblue.com/experiment/dodecahedron/
+ * Each pentagon is split in 4 pieces, whose shape is given by clever use
+ * of the border-radius property. A similar (but simpler) approach is used in
+ * http://css-tricks.com/examples/ShapesOfCSS/#pentagon , but I wasn't able
+ * to adapt it.
+ */
+
+.pentagon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 161.803398875px;
+    height: 153.884176859px;
+}
+
+.p {
+    position: absolute;
+}
+
+.p1 {
+    left: 30.9016994375px;
+    top: 57.2785252292px;
+    width: 100px;
+    height: 95.1056516295px;
+}
+
+.p2 {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 59.7785252292px solid transparent;
+    border-left: 80.9016994375px solid transparent;
+    border-right: 80.9016994375px solid transparent;
+}
+
+.p3 {
+    left: 0;
+    top: 58.7785252292px;
+    width: 0;
+    height: 0;
+    border-bottom: 95.1056516295px solid transparent;
+    border-right: 31.4016994375px solid transparent;
+}
+
+.p4 {
+    left: 130px;
+    top: 58.7785252292px;
+    width: 0;
+    height: 0;
+    border-bottom: 95.1056516295px solid transparent;
+    border-left: 30.9016994375px solid transparent;
+}
+
+
+/* 
+ * The dodecahedron
+ * ----------------
+ * This is the amazingly clever construction by @themaninblue.
+ * The dodecahedron is split in groups and subgroups such that the angle
+ * used in the "transform" CSS rule is in fact the dihedral angle, ~63deg.
+ */
+
+#dodecahedron {
+    position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -95.1056516295px 0 0 -80.9016994375px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 68.8190960236px 80.9016994375px -111.3516364px;
+	-moz-transform-origin: 68.8190960236px 80.9016994375px -111.3516364px;
+	transform-origin: 68.8190960236px 80.9016994375px -111.3516364px;
+}
+
+.group {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 161.803398875px;
+	height: 153.884176859px;
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#group1 {
+	left: -23px;
+	top: -78px;
+	-webkit-transform: rotateZ(-36deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(-36deg) rotateX(63.4349488deg);
+	transform: rotateZ(-36deg) rotateX(63.4349488deg);
+}
+
+.groupB {
+	left: 55px;
+	top: -173px;
+	-webkit-transform: rotateZ(36deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(36deg) rotateX(63.4349488deg);
+	transform: rotateZ(36deg) rotateX(63.4349488deg);
+}
+
+.groupC {
+	left: -24px;
+	top: -78px;
+	-webkit-transform: rotateZ(-36deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(-36deg) rotateX(63.4349488deg);
+	transform: rotateZ(-36deg) rotateX(63.4349488deg);
+}
+
+#group2 {
+	left: 43px;
+	top: 26px;
+	-webkit-transform: rotateZ(-108deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(-108deg) rotateX(63.4349488deg);
+	transform: rotateZ(-108deg) rotateX(63.4349488deg);
+}
+
+#group3 {
+	left: 162px;
+	top: -4px;
+	-webkit-transform: rotateZ(-180deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(-180deg) rotateX(63.4349488deg);
+	transform: rotateZ(-180deg) rotateX(63.4349488deg);
+}
+
+#group4 {
+	left: 169px;
+	top: -128px;
+	-webkit-transform: rotateZ(108deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(108deg) rotateX(63.4349488deg);
+	transform: rotateZ(108deg) rotateX(63.4349488deg);
+}
+
+#group5 {
+	left: 54px;
+	top: -173px;
+	-webkit-transform: rotateZ(36deg) rotateX(63.4349488deg);
+	-moz-transform: rotateZ(36deg) rotateX(63.4349488deg);
+	transform: rotateZ(36deg) rotateX(63.4349488deg);
+}
+
+
+/* 
+ * Colors
+ * ------
+ * This is a simplification of the approach used by @themaninblue. 
+ * I add a color class to each pentagon, then assign the right missing
+ * property to each piece. Colors where chosen from: http://goo.gl/Tr9sI
+ */
+
+.red .p1 {
+    background-color: #F90101;
+}
+
+.red .p2 {
+    border-bottom-color: #F90101;
+}
+
+.red .p3 {
+    border-right-color: #F90101;
+}
+
+.red .p4 {
+    border-left-color: #F90101;
+}
+
+
+.blue .p1 {
+    background-color: #0266C8;
+}
+
+.blue .p2 {
+    border-bottom-color: #0266C8;
+}
+
+.blue .p3 {
+    border-right-color: #0266C8;
+}
+
+.blue .p4 {
+    border-left-color: #0266C8;
+}
+
+
+.orange .p1 {
+    background-color: #F2B50F;
+}
+
+.orange .p2 {
+    border-bottom-color: #F2B50F;
+}
+
+.orange .p3 {
+    border-right-color: #F2B50F;
+}
+
+.orange .p4 {
+    border-left-color: #F2B50F;
+}
+
+
+.green .p1 {
+    background-color: #00933B;
+}
+
+.green .p2 {
+    border-bottom-color: #00933B;
+}
+
+.green .p3 {
+    border-right-color: #00933B;
+}
+
+.green .p4 {
+    border-left-color: #00933B;
+}
+
+
