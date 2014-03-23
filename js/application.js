@@ -3,8 +3,8 @@ $(document).ready(function() {
     lastEventY = null;
     velocityX = 0;
     velocityY = 0;
-	FRICTION = 0.96;
-	MIN_VELOCITY = 0.5;
+    FRICTION = 0.96;
+    MIN_VELOCITY = 0.5;
     MS_BTW_UPD = 18;
     
     init();
@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 var init = function() {
     attachEvents();
-	draw();
+    draw();
 };
 
 
@@ -55,7 +55,7 @@ var cycleColor = function() {
     }
     
     if(checkColoring()) {
-        alert("Congratulations! You solved this puzzle. I'm looking for internships in 2013. Like what you see? Email me at wnpbcb.abgnefgrsnab [at] tznvy.pbz (yes, this is yet another riddle... :)");
+        alert("Congratulations! You solved this puzzle. I'm looking for internships in 2014. Like what you see? Email me at jacopo.notarstefano [at] gmail.com");
     }
 };
 
