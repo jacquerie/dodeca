@@ -55,7 +55,7 @@ var cycleColor = function() {
     }
     
     if(checkColoring()) {
-        alert("Congratulations! You solved this puzzle. I'm looking for internships in 2014. Like what you see? Email me at jacopo.notarstefano [at] gmail.com");
+        alert("Congratulations! You solved this puzzle. Email me at jacopo.notarstefano [at] gmail.com");
     }
 };
 
