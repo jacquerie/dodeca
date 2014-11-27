@@ -144,7 +144,7 @@ var draw = function() {
 
     var dodecahedron = $('#dodecahedron');
 
-    if (dodecahedron.data('angleX') === null) {
+    if (dodecahedron.data('angleX') == null) {
         dodecahedron.data('angleX', 0);
         dodecahedron.data('angleY', 0);
     }
