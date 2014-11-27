@@ -20,7 +20,7 @@ var init = function() {
 var attachEvents = function() {
     $(document).mousemove(function(e) {
 
-        if (lastEventX != null) {
+        if (lastEventX !== null) {
             var velocityX = (e.clientX - lastEventX) * (MS_BTW_UPD / 1000);
             var velocityY = (e.clientY - lastEventY) * (MS_BTW_UPD / 1000);
             var maxVelocity = velocityX;
@@ -81,59 +81,59 @@ var checkColoring = function() {
         colors[1] === colors[4] ||
         colors[1] === colors[5] ||
         colors[1] === colors[10]) {
-            return false
+            return false;
     }
 
     if (colors[4] === colors[0] ||
         colors[4] === colors[5] ||
         colors[4] === colors[6] ||
         colors[4] === colors[7]) {
-            return false
+            return false;
     }
 
     if (colors[6] === colors[0] ||
         colors[6] === colors[7] ||
         colors[6] === colors[8] ||
         colors[6] === colors[9]) {
-            return false
+            return false;
     }
 
     if (colors[8] === colors[0] ||
         colors[8] === colors[9] ||
         colors[8] === colors[10] ||
         colors[8] === colors[11]) {
-            return false
+            return false;
     }
 
     if (colors[10] === colors[0] ||
         colors[10] === colors[2] ||
         colors[10] === colors[11]) {
-            return false
+            return false;
     }
 
     if (colors[2] === colors[3] ||
         colors[2] === colors[5] ||
         colors[2] === colors[11]) {
-            return false
+            return false;
     }
 
     if (colors[5] === colors[3] ||
         colors[5] === colors[7]) {
-            return false
+            return false;
     }
 
     if (colors[7] === colors[3] ||
         colors[7] === colors[9]) {
-            return false
+            return false;
     }
 
     if (colors[9] === colors[3] ||
         colors[9] === colors[11]) {
-            return false
+            return false;
     }
 
     if (colors[11] === colors[3]) {
-            return false
+            return false;
     }
 
     return true;
@@ -144,7 +144,7 @@ var draw = function() {
 
     var dodecahedron = $('#dodecahedron');
 
-    if (dodecahedron.data('angleX') == null) {
+    if (dodecahedron.data('angleX') === null) {
         dodecahedron.data('angleX', 0);
         dodecahedron.data('angleY', 0);
     }
@@ -169,7 +169,7 @@ var draw = function() {
     dodecahedron
         .css('-webkit-transform', 'rotateX(' + angleY +'deg) rotateY(' + -angleX + 'deg)')
         .css('-moz-transform', 'rotateX(' + angleY +'deg) rotateY(' + -angleX + 'deg)')
-        .css('transform', 'rotateX(' + angleY +'deg) rotateY(' + -angleX + 'deg)')
+        .css('transform', 'rotateX(' + angleY +'deg) rotateY(' + -angleX + 'deg)');
 
     setTimeout(draw, MS_BTW_UPD);
 };
